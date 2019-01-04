@@ -1,0 +1,69 @@
+﻿body {
+    font-family: Arial;
+    font-size: 13px;
+    background-image: url('../img/bg.jpg');
+}
+
+#tuval {
+    float: left;
+    background-image: url('../img/zemin.jpg');
+    cursor: url('../img/fare.cur'), default;
+    border: 2px solid #0B2816;
+}
+
+.sari {
+    color: #008b8b;
+}
+
+#kullaniciSec {
+    background-color: #008b8b;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    align-content: center;
+    text-align: center;
+}
+#kullaniciSec > img {
+    cursor: url('../img/fare.cur'), default;
+}
+#oyuncular {
+    float: left;
+    width: 160px;
+    height: 600px;
+}
+
+#mesajAlani {
+    float: left;
+    position: inherit;
+    width: 300px;
+    height: 600px;
+    margin: 0 0 0 10px;
+}
+.mesajlar {
+    font-size: 15px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+
+}
+#mesajListesi {
+    background-color: #ffffff;
+    width: 100%;
+    height: 480px;
+    overflow: scroll;
+    background-color: rgba(255,255,255,0.3);
+    font-family: Arial;
+    padding: 10px;
+}
+#mesajKutusu {
+    width: 100%;
+    margin: 10px 0 0 0;
+    padding: 10px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.7);
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery-1.12.2.min.js"></script>
+<style>
+	canvas{
+		background-image: url("zemin.png");
+	}
+</style>
+</head>
+<body> 
+<center>
+<canvas id="tuval" width="800" height="600" style="border:1px solid #d3d3d3;">
+Tarayýcýnýz bu özelliði desteklemiyor.</canvas></center>
+
+<p>Resim kullanýmý</p>
+<img id="ashe" src="ashe.png" alt="Çýðlýk" >
+Durum:<span id="a1">__</span>
+
+<script>
+var KarakterX = 100;
+var KarakterY = 100;
+var KarakterX_ = 100;
+var KarakterY_ = 100;
+var AtesX = 0;
+var AtesY = 0;
+var AtesX_ = 0;
+var AtesY_ = 0;
+var AtesArtisX = 0;
+var AtesArtisY = 0;
+var Ates = 0;
+var HedefSure = 0;
+
+function KarakterCiz(){
+	var lTuval=document.getElementById("tuval");
+	var lFirca=lTuval.getContext("2d");
+	var lAshe=document.getElementById("ashe");
+	lFirca.clearRect(0, 0, lTuval.width, lTuval.height);
+	for (index = 0; index < 20; ++index) {
+		AtesIlerlet();
+	}	
+	AtesEt();
+	HedefSec();
+	lFirca.beginPath();
+	lFirca.shadowBlur=5;
+	lFirca.shadowColor="blue";
+	lFirca.drawImage(lAshe, KarakterX_-40, KarakterY_-40);
+}
+function KonumAyarla(){
+	var lFarkX = Math.abs(KarakterX - KarakterX_);
+	var lFarkY = Math.abs(KarakterY - KarakterY_);
+	var lBuyuk = lFarkX > lFarkY ? lFarkX : lFarkY;
+	var lArtisX = lFarkX / lBuyuk;
+	var lArtisY = lFarkY / lBuyuk;
+	
+	if (lBuyuk < 1 ) { KarakterX_ = KarakterX; } else {
+	if (KarakterX > KarakterX_) {KarakterX_ = KarakterX_ + lArtisX;} else {
+	if (KarakterX < KarakterX_) {KarakterX_ = KarakterX_ - lArtisX;}
+	}	}
+	
+	if (lBuyuk < 1 ) { KarakterY_ = KarakterY; } else {
+	if (KarakterY > KarakterY_) {KarakterY_ = KarakterY_ + lArtisY;} else {
+	if (KarakterY < KarakterY_) {KarakterY_ = KarakterY_ - lArtisY;}
+	}	}
+}
+function HedefSec(){
+	if (HedefSure > 0){
+		HedefSure = HedefSure-1;
+		var lTuval=document.getElementById("tuval");
+		var lFirca=lTuval.getContext("2d");
+		lFirca.beginPath();
+		lFirca.shadowBlur=6;
+		lFirca.shadowColor="#0C0FCD";
+		lFirca.fillStyle="#0C0FCD";
+		lFirca.strokeStyle="#0C0FCD";
+		lFirca.arc(KarakterX, KarakterY, 15, 0, 2*Math.PI);
+		lFirca.stroke(); 
+	}
+}
+function AtesEt(){
+	if (Ates > 0){
+		var lTuval=document.getElementById("tuval");
+		var lFirca=lTuval.getContext("2d");
+		lFirca.beginPath();
+		lFirca.shadowBlur=6;
+		lFirca.shadowColor="#E8472B";
+		lFirca.fillStyle="#F36001";
+		lFirca.strokeStyle="#CD0C0F";
+		lFirca.arc(AtesX_, AtesY_, 6, 0, 2*Math.PI);
+		lFirca.fill();
+		lFirca.stroke(); 
+	}
+}
+function AtesIlerlet(){
+	if (Ates > 0) {
+		Ates = Ates-1;
+	}
+	AtesX_ = AtesX_ + AtesArtisX;
+	AtesY_ = AtesY_ + AtesArtisY;
+}
+
+document.oncontextmenu = function() {return false;};
+
+$('#tuval').mousedown(function(e){ 
+	if( e.button == 2 ) { 
+		KarakterX = e.pageX - $("#tuval").position().left;
+		KarakterY = e.pageY - $("#tuval").position().top;
+		HedefSure = 20;
+		return false; 
+	} 
+	return true; 
+}).click(function (e) { 
+	if (Ates <= 0){
+		AtesX_ = KarakterX_;
+		AtesY_ = KarakterY_;
+		AtesX = e.pageX - $("#tuval").position().left;
+		AtesY = e.pageY - $("#tuval").position().top;
+		Ates = 400;
+		var lFarkX = Math.abs(AtesX - AtesX_);
+		var lFarkY = Math.abs(AtesY - AtesY_);
+		var lBuyuk = lFarkX > lFarkY ? lFarkX : lFarkY;
+		AtesArtisX = lFarkX / lBuyuk;
+		AtesArtisY = lFarkY / lBuyuk;
+		if (AtesX < AtesX_) { 
+			AtesArtisX = AtesArtisX - (AtesArtisX*2); 
+		}
+		if (AtesY < AtesY_) { 
+			AtesArtisY = AtesArtisY - (AtesArtisY*2); 
+		}
+	}
+});
+  
+setInterval(KonumAyarla, 15);
+setInterval(KarakterCiz, 20);
+
+var lTuvar = document.getElementById("tuval")
+$("#a1").html(lTuvar.top);
+	
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

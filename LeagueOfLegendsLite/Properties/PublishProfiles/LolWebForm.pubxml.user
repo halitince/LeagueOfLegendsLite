@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Publish\lolVF</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Microsoft.AspNet.SignalR.Core.dll">
+      <publishTime>03/27/2016 15:20:16</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.SignalR.SystemWeb.dll">
+      <publishTime>03/27/2016 15:20:17</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>03/27/2016 15:20:16</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>03/27/2016 15:20:16</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>03/27/2016 15:20:16</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/27/2016 15:45:41</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>03/27/2016 15:20:16</publishTime>
+    </File>
+    <File Include="bin/WebForm.dll">
+      <publishTime>04/03/2016 22:42:31</publishTime>
+    </File>
+    <File Include="css/css.css">
+      <publishTime>04/03/2016 02:30:46</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>03/28/2016 10:25:08</publishTime>
+    </File>
+    <File Include="img/1.0.png">
+      <publishTime>03/28/2016 10:27:09</publishTime>
+    </File>
+    <File Include="img/1.1.png">
+      <publishTime>03/28/2016 10:27:09</publishTime>
+    </File>
+    <File Include="img/1.2.png">
+      <publishTime>04/03/2016 02:13:49</publishTime>
+    </File>
+    <File Include="img/2.0.png">
+      <publishTime>03/28/2016 10:27:09</publishTime>
+    </File>
+    <File Include="img/2.1.png">
+      <publishTime>03/28/2016 10:27:09</publishTime>
+    </File>
+    <File Include="img/2.2.png">
+      <publishTime>04/03/2016 02:13:43</publishTime>
+    </File>
+    <File Include="img/3.0.png">
+      <publishTime>03/28/2016 10:27:09</publishTime>
+    </File>
+    <File Include="img/3.1.png">
+      <publishTime>03/28/2016 10:27:09</publishTime>
+    </File>
+    <File Include="img/3.2.png">
+      <publishTime>04/03/2016 02:13:32</publishTime>
+    </File>
+    <File Include="img/4.0.png">
+      <publishTime>03/28/2016 10:27:09</publishTime>
+    </File>
+    <File Include="img/4.1.png">
+      <publishTime>03/28/2016 10:27:09</publishTime>
+    </File>
+    <File Include="img/4.2.png">
+      <publishTime>04/03/2016 02:13:38</publishTime>
+    </File>
+    <File Include="img/bg.jpg">
+      <publishTime>03/28/2016 10:27:09</publishTime>
+    </File>
+    <File Include="img/fare.cur">
+      <publishTime>03/28/2016 10:27:09</publishTime>
+    </File>
+    <File Include="img/harita.1.png">
+      <publishTime>04/02/2016 19:50:36</publishTime>
+    </File>
+    <File Include="img/harita.fw.png">
+      <publishTime>04/02/2016 19:11:14</publishTime>
+    </File>
+    <File Include="img/harita.jpg">
+      <publishTime>04/02/2016 19:11:14</publishTime>
+    </File>
+    <File Include="img/heykel.png">
+      <publishTime>04/03/2016 18:51:56</publishTime>
+    </File>
+    <File Include="img/zemin.jpg">
+      <publishTime>04/03/2016 17:11:32</publishTime>
+    </File>
+    <File Include="img/zemin.png">
+      <publishTime>04/03/2016 18:59:13</publishTime>
+    </File>
+    <File Include="index.aspx">
+      <publishTime>04/03/2016 19:22:13</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>03/28/2016 10:25:59</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.6.4.js">
+      <publishTime>03/28/2016 10:25:42</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.6.4.min.js">
+      <publishTime>03/28/2016 10:25:42</publishTime>
+    </File>
+    <File Include="Scripts/jquery.signalR-2.2.0.js">
+      <publishTime>03/28/2016 10:25:43</publishTime>
+    </File>
+    <File Include="Scripts/jquery.signalR-2.2.0.min.js">
+      <publishTime>03/28/2016 10:25:43</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/28/2016 10:39:12</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
